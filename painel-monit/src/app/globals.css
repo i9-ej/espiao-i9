@@ -1,0 +1,24 @@
+@import "tailwindcss";
+
+@theme {
+  --color-background: #09090b; /* Zinc 950 */
+  --color-foreground: #fafafa; /* Zinc 50 */
+  --color-primary: #f97316; /* Laranja da marca */
+  --color-primary-hover: #ea580c;
+  --color-panel: #18181b; /* Zinc 900 */
+  --color-panel-border: #27272a; /* Zinc 800 */
+}
+
+@layer base {
+  :root {
+    --background: #09090b;
+    --foreground: #fafafa;
+  }
+}
+
+body {
+  background-color: var(--background);
+  color: var(--foreground);
+  font-family: Arial, Helvetica, sans-serif;
+  @apply antialiased min-h-screen selection:bg-primary/30 selection:text-primary;
+}
